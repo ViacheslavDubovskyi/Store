@@ -1,6 +1,7 @@
 package com.hillel.store.domain;
 
 import lombok.*;
+import org.aspectj.weaver.ast.Or;
 
 import javax.persistence.*;
 import java.sql.Date;
@@ -24,4 +25,16 @@ public class Customer {
     private Date dateOfRegistration;
     private String email;
     private Long phoneNumber;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "customer_id")
+    private Address address;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "customer_id")
+    private Order order;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "customer_id")
+    private Cart cart;
 }
