@@ -19,6 +19,6 @@ public class Cart {
     private Integer id;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "order_id")
+    @JoinColumn(name = "cart_id")
     private List<Product> products;
 }
