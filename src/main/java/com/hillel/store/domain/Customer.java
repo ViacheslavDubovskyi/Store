@@ -36,7 +36,7 @@ public class Customer {
     @JoinColumn(name = "customer_id")
     private Set<Address> address;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "customer_id")
-    private Order order;
+    private List<Order> order;
 }
