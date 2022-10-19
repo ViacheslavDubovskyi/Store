@@ -22,6 +22,7 @@ spring:
     #    locations: filesystem:.\src\main\resources\db\migration
     enabled: true
     #    clean-disabled: true
+
     baseline-on-migrate: true
 #  security:
 #    user:
