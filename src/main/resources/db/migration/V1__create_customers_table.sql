@@ -5,6 +5,8 @@ create table public.users (
                               dateOfBirth date,
                               dateOfRegistration date,
                               email character varying(255),
+
                               phoneNumber varchar
                               );
+
 
