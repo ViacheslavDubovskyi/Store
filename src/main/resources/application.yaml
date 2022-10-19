@@ -4,10 +4,9 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/store
-    hikari:
-      username: postgres
-      password: JavaMax1994
-      # JPA properties
+    username: postgres
+    password: 1234
+    # JPA properties
   jpa:
     hibernate:
       ddl-auto: create # When you launch the application for the  first time - switch "none" at "create"
@@ -22,7 +21,6 @@ spring:
     #    locations: filesystem:.\src\main\resources\db\migration
     enabled: true
     #    clean-disabled: true
-
     baseline-on-migrate: true
 #  security:
 #    user:
@@ -37,7 +35,7 @@ logging:
       org.hibernate: debug
       # Server configuration
 server:
-    port: 8089 #set your port
+    port: 8088 #set your port
 
     # Swagger configuration
 springdoc:
