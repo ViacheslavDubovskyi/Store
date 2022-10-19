@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -22,5 +23,5 @@ public class Order {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "order_id")
-    private Address address;
+    private Cart cart;
 }
