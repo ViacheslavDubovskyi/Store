@@ -19,4 +19,9 @@ public class Address {
     private String country;
     private String city;
     private Integer zipCode;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "address_id")
+    private Customer customer;
+
 }

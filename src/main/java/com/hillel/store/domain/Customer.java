@@ -1,10 +1,13 @@
 package com.hillel.store.domain;
 
 import lombok.*;
+import org.aspectj.weaver.ast.Or;
 
 import javax.persistence.*;
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "customers")
@@ -24,4 +27,16 @@ public class Customer {
     private Date dateOfRegistration;
     private String email;
     private Long phoneNumber;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "customer_id")
+    private Cart cart;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "customer_id")
+    private Set<Address> address;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "customer_id")
+    private List<Order> order;
 }
