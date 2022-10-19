@@ -22,7 +22,4 @@ public class Product {
     private Double price;
     private Boolean isAvailable = Boolean.TRUE;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "product_id")
-    private Cart cart;
 }

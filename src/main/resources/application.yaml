@@ -6,7 +6,7 @@ spring:
     url: jdbc:postgresql://localhost:5432/store
     hikari:
       username: postgres
-      password: 1234
+      password: JavaMax1994
       # JPA properties
   jpa:
     hibernate:
