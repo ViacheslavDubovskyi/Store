@@ -2,7 +2,6 @@ package com.hillel.store.service.customer;
 
 import com.hillel.store.domain.Customer;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
