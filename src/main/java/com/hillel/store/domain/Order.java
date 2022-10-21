@@ -22,6 +22,6 @@ public class Order {
     private Double totalPrice;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "order_id")
+    @JoinColumn(name = "cart_id")
     private Cart cart;
 }
