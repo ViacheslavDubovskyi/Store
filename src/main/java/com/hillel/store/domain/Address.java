@@ -12,11 +12,10 @@ import javax.persistence.*;
 @Setter
 @Builder
 public class Address {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-
     private String test;
     private String country;
     private String city;
