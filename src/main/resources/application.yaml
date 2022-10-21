@@ -5,7 +5,7 @@ spring:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/store
     username: postgres
-    password: dimitrius1011
+    password: 1234
     # JPA properties
   jpa:
     hibernate:
@@ -15,8 +15,6 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     open-in-view: false
     generate-ddl: true
-
-
     #Flyway
   flyway:
     #    locations: filesystem:.\src\main\resources\db\migration
@@ -37,7 +35,6 @@ logging:
       # Server configuration
 server:
     port: 8088 #set your port
-
     # Swagger configuration
 springdoc:
   swagger-ui:
