@@ -22,7 +22,7 @@ public class Customer {
     private Integer id;
 
     private String firstName;
-    private String surName;
+    private String surname;
     private LocalDate dateOfBirth;
     private Date dateOfRegistration;
     private String email;
