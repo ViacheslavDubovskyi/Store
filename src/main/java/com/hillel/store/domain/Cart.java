@@ -5,7 +5,6 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.List;
 
-
 @Entity
 @Table(name = "carts")
 @AllArgsConstructor
@@ -14,6 +13,7 @@ import java.util.List;
 @Setter
 @Builder
 public class Cart {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

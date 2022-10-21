@@ -6,7 +6,6 @@ import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
-
 @Entity
 @Table(name = "orders")
 @AllArgsConstructor
@@ -15,6 +14,7 @@ import java.util.List;
 @Setter
 @Builder
 public class Order {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

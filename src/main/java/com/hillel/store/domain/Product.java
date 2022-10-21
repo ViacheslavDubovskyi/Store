@@ -4,7 +4,6 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.Date;
 
-
 @Entity
 @Table(name = "products")
 @AllArgsConstructor
@@ -13,6 +12,7 @@ import java.util.Date;
 @Setter
 @Builder
 public class Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

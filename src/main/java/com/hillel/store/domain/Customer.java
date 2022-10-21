@@ -1,7 +1,6 @@
 package com.hillel.store.domain;
 
 import lombok.*;
-import org.aspectj.weaver.ast.Or;
 
 import javax.persistence.*;
 import java.sql.Date;
@@ -17,6 +16,7 @@ import java.util.Set;
 @Setter
 @Builder
 public class Customer {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
