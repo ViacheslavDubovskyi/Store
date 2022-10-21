@@ -38,7 +38,7 @@ public class CustomerServiceBean implements CustomerService {
                     o.setEmail(customer.getEmail());
                     o.setFirstName(customer.getFirstName());
                     o.setPhoneNumber(customer.getPhoneNumber());
-                    o.setSurName(customer.getSurName());
+                    o.setSurname(customer.getSurname());
                     return customerRepository.save(o);
                 }).orElseThrow(() -> new EntityNotFoundException("Customer with id " + id + " was not found"));
     }

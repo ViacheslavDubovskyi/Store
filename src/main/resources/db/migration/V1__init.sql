@@ -20,7 +20,7 @@ create table public.customers (
                                   email character varying(255),
                                   first_name character varying(255),
                                   phone_number bigint,
-                                  sur_name character varying(255),
+                                  surname character varying(255),
                                   customer_id integer,
                                   foreign key (customer_id) references public.carts (id)
                                       match simple on update no action on delete no action
