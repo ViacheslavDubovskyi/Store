@@ -1,4 +1,4 @@
-package com.hillel.store.service.order;
+package com.hillel.store.repository.order;
 
 import com.hillel.store.domain.Order;
 import com.hillel.store.service.CrudService;
