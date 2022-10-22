@@ -1,8 +1,9 @@
 package com.hillel.store.domain;
+
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.util.*;
 
 @Entity
 @Table(name = "products")
@@ -21,5 +22,8 @@ public class Product {
     private String category;
     private Double price;
     private Boolean isAvailable = Boolean.TRUE;
+
+    @ManyToMany(mappedBy = "productsList")
+    private List<Cart> cartList = new ArrayList<>();
 
 }
