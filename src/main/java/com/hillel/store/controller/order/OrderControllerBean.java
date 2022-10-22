@@ -1,6 +1,5 @@
 package com.hillel.store.controller.order;
 
-import com.hillel.store.domain.Address;
 import com.hillel.store.domain.Order;
 import com.hillel.store.service.order.OrderService;
 import lombok.AllArgsConstructor;
@@ -29,20 +28,20 @@ public class OrderControllerBean implements OrderController {
     }
 
     @Override
-    @GetMapping("/order/{customer_id}")
-    public Order getById(@PathVariable Integer customer_id) {
-        return orderService.getById(customer_id);
+    @GetMapping("/order/{id}")
+    public Order getById(@PathVariable Integer id) {
+        return orderService.getById(id);
     }
 
     @Override
-    @PutMapping("/order/{customer_id}")
-    public Order updateById(@PathVariable("customer_id") Integer id, @RequestBody Order order) {
+    @PutMapping("/order/{id}")
+    public Order updateById(@PathVariable("id") Integer id, @RequestBody Order order) {
         return orderService.updateById(id, order);
     }
 
     @Override
-    @PatchMapping("/order/{customer_id}")
-    public void removeById(@PathVariable Integer customer_id) {
-        orderService.removeById(customer_id);
+    @PatchMapping("/order/{id}")
+    public void removeById(@PathVariable Integer id) {
+        orderService.removeById(id);
     }
 }

@@ -1,8 +1,6 @@
 package com.hillel.store.controller.product;
 
-import com.hillel.store.domain.Address;
 import com.hillel.store.domain.Product;
-import com.hillel.store.service.order.OrderService;
 import com.hillel.store.service.product.ProductService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
@@ -30,20 +28,20 @@ public class ProductControllerBean implements ProductController {
     }
 
     @Override
-    @GetMapping("/product/{cart_id}")
-    public Product getById(@PathVariable Integer cart_id) {
-        return productService.getById(cart_id);
+    @GetMapping("/product/{id}")
+    public Product getById(@PathVariable Integer id) {
+        return productService.getById(id);
     }
 
     @Override
-    @PutMapping("/product/{cart_id}")
-    public Product updateById(@PathVariable("cart_id") Integer id, @RequestBody Product product) {
+    @PutMapping("/product/{id}")
+    public Product updateById(@PathVariable("id") Integer id, @RequestBody Product product) {
         return productService.updateById(id, product);
     }
 
     @Override
-    @PatchMapping("/product/{cart_id}")
-    public void removeById(@PathVariable Integer cart_id) {
-        productService.removeById(cart_id);
+    @PatchMapping("/product/{id}")
+    public void removeById(@PathVariable Integer id) {
+        productService.removeById(id);
     }
 }

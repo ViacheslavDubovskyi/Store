@@ -28,20 +28,20 @@ public class AddressControllerBean implements AddressController {
     }
 
     @Override
-    @GetMapping("/address/{customer_id}")
-    public Address getById(@PathVariable Integer customer_id) {
-        return addressService.getById(customer_id);
+    @GetMapping("/address/id}")
+    public Address getById(@PathVariable Integer id) {
+        return addressService.getById(id);
     }
 
     @Override
-    @PutMapping("/address/{customer_id}")
-    public Address updateById(@PathVariable("customer_id") Integer id, @RequestBody Address address) {
+    @PutMapping("/address/{id}")
+    public Address updateById(@PathVariable("id") Integer id, @RequestBody Address address) {
         return addressService.updateById(id, address);
     }
 
     @Override
-    @PatchMapping("/address/{customer_id}")
-    public void removeById(@PathVariable Integer customer_id) {
-        addressService.removeById(customer_id);
+    @PatchMapping("/address/{id}")
+    public void removeById(@PathVariable Integer id) {
+        addressService.removeById(id);
     }
 }
