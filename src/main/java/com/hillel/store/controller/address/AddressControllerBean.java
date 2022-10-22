@@ -1,32 +1,47 @@
 package com.hillel.store.controller.address;
 
 import com.hillel.store.domain.Address;
+import com.hillel.store.service.address.AddressService;
+import lombok.AllArgsConstructor;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
+@AllArgsConstructor
+@RequestMapping(value = "/store_api", produces = MediaType.APPLICATION_JSON_VALUE)
 public class AddressControllerBean implements AddressController {
+
+    private final AddressService addressService;
+
     @Override
-    public Address create(Address object) {
-        return null;
+    @PostMapping("/address")
+    public Address create(@RequestBody Address address) {
+        return addressService.create(address);
     }
 
     @Override
+    @GetMapping("/address")
     public List<Address> getAll() {
-        return null;
+        return addressService.getAll();
     }
 
     @Override
-    public Address getById(Integer id) {
-        return null;
+    @GetMapping("/address/{customer_id}")
+    public Address getById(@PathVariable Integer customer_id) {
+        return addressService.getById(customer_id);
     }
 
     @Override
-    public Address updateById(Integer id, Address object) {
-        return null;
+    @PutMapping("/address/{customer_id}")
+    public Address updateById(@PathVariable("customer_id") Integer id, @RequestBody Address address) {
+        return addressService.updateById(id, address);
     }
 
     @Override
-    public void removeById(Integer id) {
-
+    @PatchMapping("/address/{customer_id}")
+    public void removeById(@PathVariable Integer customer_id) {
+        addressService.removeById(customer_id);
     }
 }
