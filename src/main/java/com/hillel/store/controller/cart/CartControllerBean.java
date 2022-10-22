@@ -1,32 +1,47 @@
 package com.hillel.store.controller.cart;
 
 import com.hillel.store.domain.Cart;
+import com.hillel.store.service.cart.CartService;
+import lombok.AllArgsConstructor;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
+@AllArgsConstructor
+@RequestMapping(value = "/store_api", produces = MediaType.APPLICATION_JSON_VALUE)
 public class CartControllerBean implements CartController {
+
+    private final CartService cartService;
+
     @Override
-    public Cart create(Cart object) {
-        return null;
+    @PostMapping("/cart")
+    public Cart create(@RequestBody Cart cart) {
+        return cartService.create(cart);
     }
 
     @Override
+    @GetMapping("/cart")
     public List<Cart> getAll() {
-        return null;
+        return cartService.getAll();
     }
 
     @Override
-    public Cart getById(Integer id) {
-        return null;
+    @GetMapping("/cart/{id}")
+    public Cart getById(@PathVariable Integer id) {
+        return cartService.getById(id);
     }
 
     @Override
-    public Cart updateById(Integer id, Cart object) {
-        return null;
+    @PutMapping("/cart/{id}")
+    public Cart updateById(@PathVariable("id") Integer id, @RequestBody Cart cart) {
+        return cartService.updateById(id, cart);
     }
 
     @Override
-    public void removeById(Integer id) {
-
+    @PatchMapping("/cart/{id}")
+    public void removeById(@PathVariable Integer id) {
+        cartService.removeById(id);
     }
 }
