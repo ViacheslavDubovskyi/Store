@@ -2,11 +2,19 @@ create table public.addresses (
                                   id integer primary key not null default nextval('addresses_id_seq'::regclass),
                                   city character varying(255),
                                   country character varying(255),
-                                  test character varying(255),
                                   zip_code integer,
                                   customer_id integer,
                                   foreign key (customer_id) references public.customers (id)
                                       match simple on update no action on delete no action
+);
+
+create table public.cart_product (
+                                     cart_id integer not null,
+                                     product_id integer not null,
+                                     foreign key (cart_id) references public.carts (id)
+                                         match simple on update no action on delete no action,
+                                     foreign key (product_id) references public.products (id)
+                                         match simple on update no action on delete no action
 );
 
 create table public.carts (
@@ -30,9 +38,9 @@ create table public.orders (
                                id integer primary key not null default nextval('orders_id_seq'::regclass),
                                delivery_price double precision,
                                total_price double precision,
-                               order_id integer,
+                               cart_id integer,
                                customer_id integer,
-                               foreign key (order_id) references public.carts (id)
+                               foreign key (cart_id) references public.carts (id)
                                    match simple on update no action on delete no action,
                                foreign key (customer_id) references public.customers (id)
                                    match simple on update no action on delete no action
@@ -43,9 +51,6 @@ create table public.products (
                                  category character varying(255),
                                  is_available boolean,
                                  price double precision,
-                                 product_name character varying(255),
-                                 cart_id integer,
-                                 foreign key (cart_id) references public.carts (id)
-                                     match simple on update no action on delete no action
+                                 product_name character varying(255)
 );
 
