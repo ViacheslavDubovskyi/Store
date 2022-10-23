@@ -28,7 +28,7 @@ public class AddressControllerBean implements AddressController {
     }
 
     @Override
-    @GetMapping("/address/id}")
+    @GetMapping("/address/{id}")
     public Address getById(@PathVariable Integer id) {
         return addressService.getById(id);
     }
