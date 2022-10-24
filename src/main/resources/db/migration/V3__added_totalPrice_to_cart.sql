@@ -1,0 +1,1 @@
+alter table carts add if not exists totalPrice boolean;
