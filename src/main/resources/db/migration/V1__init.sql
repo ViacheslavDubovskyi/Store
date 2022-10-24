@@ -53,4 +53,3 @@ create table public.products (
                                  price double precision,
                                  product_name character varying(255)
 );
-
