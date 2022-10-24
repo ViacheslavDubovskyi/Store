@@ -31,7 +31,12 @@ public class CartServiceBean implements CartService {
 
     @Override
     public Cart updateById(Integer id, Cart cart) {
-        return null;
+        return cartRepository.findById(id)
+                .map(o -> {
+                    o.setTotalPrice(cart.getTotalPrice());
+                    return cartRepository.save(o);
+                })
+                .orElseThrow(() -> new EntityNotFoundException("Order with id " + id + " was not found"));
     }
 
     @Override
