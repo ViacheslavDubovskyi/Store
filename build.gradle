@@ -32,6 +32,11 @@ dependencies {
     implementation group: 'org.mapstruct', name: 'mapstruct', version: '1.5.3.Final'
     // https://mvnrepository.com/artifact/org.mapstruct/mapstruct-processor
     implementation group: 'org.mapstruct', name: 'mapstruct-processor', version: '1.5.3.Final'
+    // https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-annotations
+    implementation group: 'io.swagger.core.v3', name: 'swagger-annotations', version: '2.2.2'
+    // https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui
+    implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.6.11'
+
 }
 
 tasks.named('test') {
