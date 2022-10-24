@@ -19,7 +19,6 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Double deliveryPrice;
-    private Double totalPrice;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "cart_id")
