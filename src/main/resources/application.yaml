@@ -5,7 +5,7 @@ spring:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/store
     username: postgres
-    password: 1234
+    password: wildfly
     # JPA properties
   jpa:
     hibernate:
@@ -34,7 +34,7 @@ logging:
       org.hibernate: debug
       # Server configuration
 server:
-    port: 8088 #set your port
+    port: 8087 #set your port
     # Swagger configuration
 springdoc:
   swagger-ui:
