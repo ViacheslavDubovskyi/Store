@@ -23,7 +23,7 @@ public class Product {
     private Double price;
     private Boolean isAvailable = Boolean.TRUE;
 
-    @ManyToMany(mappedBy = "productsList")
+    @ManyToMany(fetch = FetchType.EAGER,mappedBy = "productsList")
     private List<Cart> cartList = new ArrayList<>();
 
 }
