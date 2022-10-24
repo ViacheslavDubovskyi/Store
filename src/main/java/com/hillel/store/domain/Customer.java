@@ -3,7 +3,8 @@ package com.hillel.store.domain;
 import lombok.*;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
@@ -23,8 +24,8 @@ public class Customer {
 
     private String firstName;
     private String surname;
-    private LocalDate dateOfBirth;
-    private Date dateOfRegistration;
+    private LocalDate dateOfBirth ;
+    private Date dateOfRegistration = Date.from(Instant.now());
     private String email;
     private Long phoneNumber;
 
