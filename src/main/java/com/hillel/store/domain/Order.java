@@ -20,7 +20,7 @@ public class Order {
     private Integer id;
     private Double deliveryPrice;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     @JoinColumn(name = "cart_id")
     private Cart cart;
 }
