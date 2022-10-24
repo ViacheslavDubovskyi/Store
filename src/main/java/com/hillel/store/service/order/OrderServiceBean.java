@@ -35,7 +35,6 @@ public class OrderServiceBean implements OrderService {
         return orderRepository.findById(id)
                 .map(o -> {
                     o.setDeliveryPrice(order.getDeliveryPrice());
-                    o.setTotalPrice(order.getTotalPrice());
                     o.setCart(order.getCart());
                     return orderRepository.save(o);
                 })
