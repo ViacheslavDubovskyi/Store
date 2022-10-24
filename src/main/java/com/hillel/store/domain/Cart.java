@@ -18,7 +18,7 @@ public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
+    private Double totalPrice;
     @ManyToMany
     @JoinTable(
             name = "cart_product",
