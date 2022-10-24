@@ -1,6 +1,6 @@
 package com.hillel.store.dto;
 
-public class AddressCreateDto {
+public class AddressReadDto {
 
     private String country;
     private String city;
