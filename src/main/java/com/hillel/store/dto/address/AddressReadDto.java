@@ -10,15 +10,15 @@ public class AddressReadDto {
     @NotNull(message = "Country may not be null")
     @Size(min = 3, max = 20, message = "Country must be between 3 and 20 characters long")
     @Schema(description = "Country of customer", example = "Ukraine", required = true)
-    private String country;
+    public String country;
 
     @NotNull(message = "City may not be null")
     @Size(min = 3, max = 20, message = "City must be between 3 and 20 characters long")
     @Schema(description = "City of customer", example = "Dnipro", required = true)
-    private String city;
+    public String city;
 
     @NotNull(message = "Zip Code may not be null")
     @Size(min = 5, max = 5, message = "Zip Code must be 5 characters long")
     @Schema(description = "Zip Code of customer", example = "49130", required = true)
-    private Integer zipCode;
+    public Integer zipCode;
 }
