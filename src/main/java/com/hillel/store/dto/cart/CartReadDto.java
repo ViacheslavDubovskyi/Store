@@ -7,5 +7,5 @@ import java.util.List;
 public class CartReadDto {
 
     public Double totalPrice;
-    public List<ProductReadDto> productsList = new ArrayList<>();
+    public List<ProductReadDto> productsDtoList = new ArrayList<>();
 }
