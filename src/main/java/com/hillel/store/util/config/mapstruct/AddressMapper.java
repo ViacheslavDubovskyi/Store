@@ -1,7 +1,6 @@
 package com.hillel.store.util.config.mapstruct;
 
 import com.hillel.store.domain.Address;
-import com.hillel.store.dto.address.AddressCreateDto;
 import com.hillel.store.dto.address.AddressReadDto;
 import org.mapstruct.Mapper;
 
@@ -10,9 +9,9 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface AddressMapper {
 
-    Address createAddressFromDto(AddressCreateDto addressCreateDto);
+    Address createAddressFromDto(AddressReadDto addressCreateDto);
 
-    AddressCreateDto productCreateDto(Address address);
+    AddressReadDto productCreateDto(Address address);
 
     AddressReadDto addressReadDto(Address address);
 
