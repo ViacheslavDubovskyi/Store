@@ -1,7 +1,7 @@
 package com.hillel.store.service.address;
 
 import com.hillel.store.domain.Address;
-import com.hillel.store.repository.AddressRepository;
+import com.hillel.store.repository.address.AddressRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
