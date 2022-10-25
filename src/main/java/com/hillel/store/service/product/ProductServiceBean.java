@@ -1,7 +1,7 @@
 package com.hillel.store.service.product;
 
 import com.hillel.store.domain.Product;
-import com.hillel.store.repository.ProductRepository;
+import com.hillel.store.repository.product.ProductRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

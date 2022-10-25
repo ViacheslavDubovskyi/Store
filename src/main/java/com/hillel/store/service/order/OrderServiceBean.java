@@ -1,7 +1,7 @@
 package com.hillel.store.service.order;
 
 import com.hillel.store.domain.Order;
-import com.hillel.store.repository.OrderRepository;
+import com.hillel.store.repository.order.OrderRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

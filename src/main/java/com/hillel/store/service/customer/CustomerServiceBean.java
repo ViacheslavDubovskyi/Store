@@ -1,7 +1,7 @@
 package com.hillel.store.service.customer;
 
 import com.hillel.store.domain.Customer;
-import com.hillel.store.repository.CustomerRepository;
+import com.hillel.store.repository.customer.CustomerRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

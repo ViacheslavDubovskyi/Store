@@ -1,7 +1,7 @@
 package com.hillel.store.service.cart;
 
 import com.hillel.store.domain.Cart;
-import com.hillel.store.repository.CartRepository;
+import com.hillel.store.repository.cart.CartRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
