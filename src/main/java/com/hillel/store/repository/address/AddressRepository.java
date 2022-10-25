@@ -11,4 +11,12 @@ public interface AddressRepository extends JpaRepository<Address, Integer> {
 
     // TODO add and redo methods when create column is_deleted
 
+    @Query("select a from Address a where a.city = ?1")
+    Page<Address> findByCity(String city, Pageable pageable);
+
+    @Query("select a from Address a where a.country = ?1")
+    Page<Address> findByCountry(String country, Pageable pageable);
+
+    @Query("select a from Address a where a.zipCode = ?1")
+    Page<Address> findByCode(String code, Pageable pageable);
 }
