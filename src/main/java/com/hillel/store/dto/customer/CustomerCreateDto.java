@@ -1,14 +1,13 @@
-package com.hillel.store.dto;
+package com.hillel.store.dto.customer;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.sql.Date;
 import java.time.LocalDate;
 
-public class CustomerReadDto {
+public class CustomerCreateDto {
 
     @NotNull(message = "Name may not be null")
     @Size(min = 2, max = 20, message = "Name must be between 2 and 20 characters long")
@@ -23,8 +22,6 @@ public class CustomerReadDto {
     @NotNull(message = "DateOfBirth may not be null")
     @Schema(description = "Date of Birth", example = "2001-05-27", required = true)
     private LocalDate dateOfBirth;
-
-    private Date dateOfRegistration;
 
     @Email
     @NotNull

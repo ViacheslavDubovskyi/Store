@@ -1,4 +1,4 @@
-package com.hillel.store.dto;
+package com.hillel.store.dto.address;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 

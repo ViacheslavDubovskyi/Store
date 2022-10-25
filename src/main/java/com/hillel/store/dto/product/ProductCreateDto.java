@@ -1,13 +1,11 @@
-package com.hillel.store.dto;
+package com.hillel.store.dto.product;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-public class ProductReadDto {
-
-    private Integer id;
+public class ProductCreateDto {
 
     @NotNull(message = "Product name may not be null")
     @Size(min = 2, max = 30, message = "Product name must be between 2 and 30 characters long")
