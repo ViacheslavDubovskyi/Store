@@ -1,4 +1,4 @@
-package com.hillel.store.dto;
+package com.hillel.store.dto.customer;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 
@@ -8,7 +8,7 @@ import javax.validation.constraints.Size;
 import java.sql.Date;
 import java.time.LocalDate;
 
-public class CustomerUpdateDto {
+public class CustomerReadDto {
 
     @NotNull(message = "Name may not be null")
     @Size(min = 2, max = 20, message = "Name must be between 2 and 20 characters long")

@@ -1,11 +1,11 @@
-package com.hillel.store.dto;
+package com.hillel.store.dto.address;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-public class AddressUpdateDto {
+public class AddressCreateDto {
 
     @NotNull(message = "Country may not be null")
     @Size(min = 3, max = 20, message = "Country must be between 3 and 20 characters long")
